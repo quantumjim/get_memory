@@ -8,11 +8,11 @@ You'll need Python3 to run this game.
 
 First download the source and then cd into the folder using a terminal. To install the dependencies, use the command
 
-```python3 -m pip install -r requirements.txt ```
+```python3 -m pip install -r requirements.txt```
 
 To play the game, use the command
 
-```python3 rungame.py```
+```python3 run_game.py```
 
 The game is played using two windows: the terminal window for text and the pygame window for visuals.
 
