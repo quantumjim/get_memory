@@ -1,6 +1,6 @@
 # .get_memory()
 
-A game!
+A game made with [Pygame](https://www.pygame.org) and [Qiskit](https://qiskit.org/).
 
 ## How to run
 
@@ -37,3 +37,8 @@ There are three reasons that this game exists, and which led to it being what it
    ```from qiskit import *; ''.join( [ '╱'*(b=='0') + '╲'*(b=='1') for b in execute(QuantumCircuit().from_qasm_str('include "qelib1.inc";qreg q[1];creg c[1];h q[0];measure q -> c;'),Aer.get_backend('qasm_simulator'),shots=1024,memory=True).result().get_memory()])```
    
    The original program is referred to simply as ```10 PRINT``` in [this book](https://10print.org/) about it, after the first part of the program. I instead name my program, and this game based upon it, using the part near the end: ```.get_memory()```.
+   
+## Things you might also like
+
+* Scientifically accurate animations of teleportation (for bitmaps), made using Qiskit. See [here](https://github.com/quantumjim/quantograph/blob/master/example.md). These didn't quite make it into the game.
+* [The history of games for quantum computers](https://medium.com/@decodoku/the-history-of-games-for-quantum-computers-a1de98859b5a)
