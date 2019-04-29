@@ -40,5 +40,5 @@ There are three reasons that this game exists, and which led to it being what it
    
 ## Things you might also like
 
-* Scientifically accurate animations of teleportation (for bitmaps), made using Qiskit(see [here](https://github.com/quantumjim/quantograph/blob/master/example.md)). These didn't quite make it into the game.
+* Scientifically accurate animations of teleportation (for bitmaps), made using Qiskit (see [here](https://github.com/quantumjim/quantograph/blob/master/example.md)). These didn't quite make it into the game.
 * [The history of games for quantum computers](https://medium.com/@decodoku/the-history-of-games-for-quantum-computers-a1de98859b5a)
