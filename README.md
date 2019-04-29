@@ -33,3 +33,5 @@ There are three reasons that this game exists, and which led to it being what it
    This was ported into the following quantum program, which is the basis for the labyrinths in the game
    
    ```from qiskit import *; ''.join( [ '╱'*(b=='0') + '╲'*(b=='1') for b in execute(QuantumCircuit().from_qasm_str('include "qelib1.inc";qreg q[1];creg c[1];h q[0];measure q -> c;'),Aer.get_backend('qasm_simulator'),shots=1024,memory=True).result().get_memory()])```
+   
+   The original program is referred to simply as ```10 PRINT``` in [this book](https://10print.org/) about it, after the first part of the program. I instead name my program, and this game based upon it, using the part near the end: ```.get_memory()```.
