@@ -1,6 +1,6 @@
 # .get_memory()
 
-A game made with [Pygame](https://www.pygame.org) and [Qiskit](https://qiskit.org/).
+A game for [Ludum Dare 44]((https://ldjam.com/events/ludum-dare/44)) made with [Pygame](https://www.pygame.org) and [Qiskit](https://qiskit.org/).
 
 ## How to run
 
