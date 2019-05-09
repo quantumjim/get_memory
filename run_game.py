@@ -1,7 +1,6 @@
 import pygame
 from WorldBuilder import *
-from GetMemoryPrototype import *
-from GetMemoryPygame import *
+from GetMemory import *
 import random
 
 

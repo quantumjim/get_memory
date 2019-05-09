@@ -228,8 +228,9 @@ def quantum_tartan (seed,theta,grid=None,shots=1,log=True):
 
     q = QuantumRegister(n)
     qc = QuantumCircuit(q)
-    qc.ry(2*np.pi*theta,q)
     qc.initialize(state,q)
+    qc.ry(2*np.pi*theta,q)
+
     
     if shots>1:
         try:
@@ -256,9 +257,9 @@ def quantum_tartan (seed,theta,grid=None,shots=1,log=True):
         counts = job.result().get_counts()
     else:
         counts = state2counts( job.result().get_statevector() )
-        
+
     Z = counts2height(counts,grid,log=log)   
-    
+
     return Z, grid
 
 
