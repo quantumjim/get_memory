@@ -2,3 +2,4 @@ qiskit==0.8.0
 pygame
 Pillow
 opensimplex
+mcpi

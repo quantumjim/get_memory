@@ -2,17 +2,28 @@
 
 ## How to run
 
-You'll need Python3 to run this game.
+This all runs in Python 3, so you'll need to get that first. The following commands assume that your Python 3 goes by the alias `python 3`.
 
 First download the source and then cd into the folder using a terminal. To install the dependencies, use the command
 
-```python3 -m pip install -r requirements.txt ```
+   python3 -m pip install -r requirements.txt
 
 To play the game, use the command
 
-```python3 rungame.py```
+   python3 run_game.py
 
 The game is played using two windows: the terminal window for text and the pygame window for visuals.
+
+To just generate a new map, use
+
+   python3 run_mapmaker.py
+   
+The maps can also be implemented in Minecraft using the `mcpi` package. This works without out of the box for the Raspberry Pi version of Minecraft. Just open a world that you don't mind being written over, and run
+
+   python3 run_minecrafter.py
+
+For other versions of Minecfaft, or for [Minetest](http://www.minetest.net/), you'll need to do some setting up first. 
+
 
 ## How to play
 

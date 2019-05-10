@@ -32,7 +32,7 @@ while True:
         Z = eval( file.read() )
 
     img = height2image(Z,terrain=[2/16,3/16,5/16,10/16,12/16])
-    img.save('temp.png')
+    img.save('map.png')
 
 
 
@@ -78,7 +78,7 @@ while True:
 
     clock = pygame.time.Clock()
 
-    background = pygame.image.load("temp.png").convert()
+    background = pygame.image.load("map.png").convert()
     map_height = background.get_height()
     map_width = background.get_height()
 
@@ -247,5 +247,5 @@ while True:
 ███████╗╚██████╔╝██║  ██║██████╔╝██║██║ ╚████║╚██████╔╝██╗██╗██╗
 ╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚═════╝ ╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚═╝╚═╝╚═╝''')
     print('\n'*5)
-    print('The island generation procedure is now beginning. The whole process should take around 30 seconds.\n')
+    print('The island generation procedure is now beginning. The whole process should take less than 30 seconds.\n')
     make_world()

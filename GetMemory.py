@@ -144,11 +144,18 @@ def make_world():
     # This ties together the above functions and functions from WorldBuilder using a fixed set of parameters to make a world
     # nothing returned, it's saved as heightmap.txt instead
 
-    start = time.time()
     
-    samples = 200
+    map_size = [270,270]
+    period = [3,3]
+    k = 15
     
     n = 10
+    
+    samples = 300
+    
+    
+    start = time.time()
+    
     L = get_L(n)
     Z = mountain_seed(L,[int(L[0]/2),int(L[1]/2)],10)
     Z, grid = quantum_tartan(Z,0.07)
@@ -166,13 +173,8 @@ def make_world():
     print('Generation of',samples,'patterns took',int(ends-starts),'seconds')
 
     print('\nThe quantum patterns are now being compiled into a map...')
-    map_size = [250,250]
-    period = [3,3]
 
     Z = islands(map_size,period,tartans)
-
-
-    k = 10
     maze = generate_maze( [int(map_size[0]/k),int(map_size[1]/k)], k )
 
 
