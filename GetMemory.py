@@ -77,8 +77,7 @@ def generate_maze(L,k):
   
     shots = L[0]*L[1]
     
-    result = random.choices( ['0','1'],k=shots)
-    #execute(QuantumCircuit.from_qasm_str('include "qelib1.inc";qreg q[1];creg c[1];h q[0];measure q-> c;'),BasicAer.get_backend('qasm_simulator'),shots=shots,memory=True).result().get_memory()
+    result = execute(QuantumCircuit.from_qasm_str('include "qelib1.inc";qreg q[1];creg c[1];h q[0];measure q-> c;'),Aer.get_backend('qasm_simulator'),shots=shots,memory=True).result().get_memory()
     
     maze = {}
     
