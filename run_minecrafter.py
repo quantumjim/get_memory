@@ -34,7 +34,7 @@ world.setBlocks(-132,-132,-132,132,132,132, block.AIR.id)
 world.setBlocks(-134,0,-134,134,0,134,block.GLOWSTONE_BLOCK.id)
 
 
-height = 16
+height = 8
 depth = 8
 
 levels = [5/16,6/16,9/16,12/16,14/16]
@@ -66,6 +66,7 @@ for (x,y) in z:
             if random.random()<0.025:
                 tree(X,Z,Y)            
         elif z_eff<levels[3]:
+            world.setBlocks( X,1,Y, X,Z,Y, block.STONE.id )
             world.setBlock( X,Z+1,Y, block.GRASS.id )
         elif z_eff<levels[4]:
             world.setBlocks( X,1,Y, X,Z,Y, block.STONE.id )
