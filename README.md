@@ -1,20 +1,29 @@
 # .get_memory()
 
-A game for [Ludum Dare 44](https://ldjam.com/events/ludum-dare/44) made with [Pygame](https://www.pygame.org) and [Qiskit](https://qiskit.org/).
-
 ## How to run
 
-You'll need Python3 to run this game.
+This all runs in Python 3, so you'll need to get that first. The following commands assume that your Python 3 goes by the alias `python 3`.
 
 First download the source and then cd into the folder using a terminal. To install the dependencies, use the command
 
-```python3 -m pip install -r requirements.txt```
+   python3 -m pip install -r requirements.txt
 
 To play the game, use the command
 
-```python3 run_game.py```
+   python3 run_game.py
 
 The game is played using two windows: the terminal window for text and the pygame window for visuals.
+
+To just generate a new map, use
+
+   python3 run_mapmaker.py
+   
+The maps can also be implemented in Minecraft using the `mcpi` package. This works without out of the box for the Raspberry Pi version of Minecraft. Just open a world that you don't mind being written over, and run
+
+   python3 run_minecrafter.py
+
+For other versions of Minecfaft, or for [Minetest](http://www.minetest.net/), you'll need to do some setting up first. 
+
 
 ## How to play
 
@@ -35,11 +44,3 @@ There are three reasons that this game exists, and which led to it being what it
    This was ported into the following quantum program, which is the basis for the labyrinths in the game
    
    ```from qiskit import *; ''.join( [ '╱'*(b=='0') + '╲'*(b=='1') for b in execute(QuantumCircuit().from_qasm_str('include "qelib1.inc";qreg q[1];creg c[1];h q[0];measure q -> c;'),Aer.get_backend('qasm_simulator'),shots=1024,memory=True).result().get_memory()])```
-   
-   The original program is referred to simply as ```10 PRINT``` in [this book](https://10print.org/) about it, after the first part of the program. I instead name my program, and this game based upon it, using the part near the end: ```.get_memory()```.
-   
-## Things you might also like
-
-* Scientifically accurate animations of teleportation (for bitmaps), made using Qiskit (see [here](https://github.com/quantumjim/quantograph/blob/master/example.md)). These didn't quite make it into the game.
-* [The history of games for quantum computers](https://medium.com/@decodoku/the-history-of-games-for-quantum-computers-a1de98859b5a)
-* A barely playable ASCII prototype for this game can be found [here](https://trinket.io/python3/cab3091236).

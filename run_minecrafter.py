@@ -22,9 +22,6 @@ z = eval(z)
 
 for (x,y) in z:
 
-    if abs(x-y)<3:
-        z[x,y] = -1
-
     X = x-144
     Y = y-144
     Z = depth + int( z[x,y]*height )+1
